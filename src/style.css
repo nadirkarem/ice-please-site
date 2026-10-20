@@ -561,25 +561,28 @@ html:not(.js) .ip-chapter, .no-motion .ip-chapter { min-height: 0; padding-block
   .ip-split__media { aspect-ratio: 4 / 5; }
 }
 
-/* ---- instagram strip ----------------------------------------------------------------- */
-.ip-insta { padding-block: 0 clamp(64px, 9vw, 128px); }
-.ip-insta__card {
-  display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px 20px;
-  padding: clamp(20px, 3vw, 32px); border-radius: var(--ip-radius-l); background: #fff;
-  box-shadow: inset 0 0 0 1px var(--ip-line); transition: transform 0.4s var(--ip-spring), box-shadow 0.3s;
-}
-.ip-insta__card:active { transform: scale(0.99); transition-duration: 0.08s; }
-.ip-insta__icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; background: var(--ip-fjord); color: #fff; }
-.ip-insta__icon .ip-icon { width: 28px; height: 28px; }
-.ip-insta__text { display: grid; gap: 2px; }
-.ip-insta__title { font-size: clamp(1.15rem, 1rem + 0.8vw, 1.6rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+/* ---- instagram: the profile and its six latest posts ----------------------------------------------- */
+.ip-insta { padding-block: clamp(56px, 8vw, 112px); }
+.ip-insta__wrap { display: grid; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.ip-insta__head { display: grid; gap: 14px; justify-items: start; }
+.ip-insta__avatar { display: grid; place-items: center; width: 68px; height: 68px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 1px var(--ip-line); overflow: hidden; }
+.ip-insta__avatar img { width: 78%; height: auto; }
+.ip-insta__head h2 { max-width: 14ch; }
 .ip-insta__handle { color: var(--ip-slate); font-weight: 500; }
-.ip-insta__go { grid-column: 1 / -1; display: inline-flex; align-items: center; gap: 0.5em; font-weight: 600; color: var(--ip-fjord); }
-@media (min-width: 720px) {
-  .ip-insta__card { grid-template-columns: auto 1fr auto; }
-  .ip-insta__go { grid-column: auto; }
+.ip-insta__head .ip-btn { margin-top: 6px; }
+.ip-insta__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.ip-insta__grid > li { grid-column: span 2; }
+.ip-insta__grid > li:nth-child(n + 4) { grid-column: span 3; }
+.ip-insta__tile { display: block; aspect-ratio: 1; overflow: hidden; border-radius: 14px; background: var(--ip-mist); }
+.ip-insta__grid > li:nth-child(n + 4) .ip-insta__tile { aspect-ratio: 3 / 2; }
+.ip-insta__tile .ip-pic, .ip-insta__tile img { width: 100%; height: 100%; }
+.ip-insta__tile img { transition: transform 0.9s var(--ip-ease); }
+@media (hover: hover) { .ip-insta__tile:hover img { transform: scale(1.06); } }
+@media (min-width: 900px) {
+  .ip-insta__wrap { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .ip-insta__grid { gap: 12px; }
+  .ip-insta__tile { border-radius: 18px; }
 }
-@media (hover: hover) { .ip-insta__card:hover { box-shadow: inset 0 0 0 1px var(--ip-line), 0 18px 40px -22px rgb(22 48 77 / 0.5); } }
 
 /* ---- contact ---------------------------------------------------------------------------- */
 .ip-contact { background: linear-gradient(to bottom, var(--ip-glacier), var(--ip-frost-soft) clamp(90px, 14vw, 180px)); }

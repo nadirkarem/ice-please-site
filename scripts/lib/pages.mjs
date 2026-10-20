@@ -230,6 +230,25 @@ function contactPanel(ctx) {
       </div>`;
 }
 
+/** Five posts chosen by the client from the company's Instagram profile; every tile opens the profile. */
+function instagram(ctx) {
+  const { c, site } = ctx;
+  const tiles = [1, 2, 3, 4, 5]
+    .map((i) => `<li><a class="ip-insta__tile" href="${site.instagramUrl}" ${external}>${picture(ctx, `insta-${i}`, { alt: alt(ctx, `insta-${i}`), sizes: '(min-width: 900px) 330px, 46vw' })}</a></li>`)
+    .join('');
+  return `<section class="ip-section ip-insta" aria-labelledby="h-insta">
+      <div class="ip-wrap ip-insta__wrap" data-reveal>
+        <div class="ip-insta__head">
+          <span class="ip-insta__avatar"><img src="/brand/logo.webp" width="640" height="485" alt=""></span>
+          <h2 id="h-insta">${esc(c.home.instagram.title)}</h2>
+          <bdi class="ip-insta__handle" dir="ltr">@${site.instagram}</bdi>
+          <a class="ip-btn ip-btn--dark" href="${site.instagramUrl}" ${external}>${icon('instagram')}<span>${esc(c.ui.instagramView)}</span></a>
+        </div>
+        <ul class="ip-insta__grid">${tiles}</ul>
+      </div>
+    </section>`;
+}
+
 // ---------------------------------------------------------------- pages
 
 export function home(ctx) {
@@ -285,16 +304,6 @@ export function home(ctx) {
       </div>
     </section>
 
-    <section class="ip-section ip-insta">
-      <div class="ip-wrap">
-        <a class="ip-insta__card" href="${ctx.site.instagramUrl}" ${external} data-reveal>
-          <span class="ip-insta__icon">${icon('instagram')}</span>
-          <span class="ip-insta__text"><span class="ip-insta__title">${esc(h.instagram.title)}</span><bdi class="ip-insta__handle" dir="ltr">@${ctx.site.instagram}</bdi></span>
-          <span class="ip-insta__go"><span>${esc(c.ui.instagramView)}</span>${icon('arrow')}</span>
-        </a>
-      </div>
-    </section>
-
     <section class="ip-section ip-contact" id="contact" aria-labelledby="h-contact">
       <div class="ip-wrap ip-contact__grid">
         <div class="ip-contact__intro" data-reveal>
@@ -304,7 +313,9 @@ export function home(ctx) {
         </div>
         <div class="ip-panel" data-reveal>${form(ctx, 'contact')}</div>
       </div>
-    </section>`;
+    </section>
+
+    ${instagram(ctx)}`;
 }
 
 export function glacons(ctx) {
@@ -417,7 +428,8 @@ export function contact(ctx) {
         </div>
         <div data-reveal>${contactPanel(ctx)}</div>
       </div>
-    </section>`;
+    </section>
+    ${instagram(ctx)}`;
 }
 
 export function legal(ctx, page) {
