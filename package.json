@@ -1,0 +1,20 @@
+{
+  "name": "ice-please-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Ice Please (Maroc) — site vitrine FR/EN/AR, statique, portable vers Odoo",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5190",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5191",
+    "images": "node scripts/images.mjs",
+    "odoo": "node scripts/odoo-pack.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/noto-sans-arabic": "^5.3.0",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.4"
+  }
+}

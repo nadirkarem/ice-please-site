@@ -1,0 +1,34 @@
+{
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "blocks": [
+      ["h2", "Engagement envers la confidentialité"],
+      ["p", "Chez FAAB & Co, nous accordons une importance primordiale à la protection de vos données personnelles. Nous nous engageons à préserver la confidentialité et la sécurité des informations que vous nous confiez lors de l’utilisation de nos services."],
+      ["h3", "Utilisation des informations collectées"],
+      ["p", "Les données personnelles recueillies sont utilisées exclusivement dans le cadre de la gestion de la relation client, de l’amélioration de nos services et du respect de nos obligations légales. Nous veillons à ce qu’aucune information ne soit utilisée à des fins non autorisées."],
+      ["h3", "Protection et sécurité des données"],
+      ["p", "FAAB & Co met en œuvre des mesures de sécurité techniques et organisationnelles afin de garantir la confidentialité, l’intégrité et la disponibilité de vos données, et de prévenir tout accès non autorisé, perte ou divulgation."],
+      ["h2", "Collecte des données personnelles"],
+      ["h3", "Partage et communication des données"],
+      ["p", "Vos données personnelles ne sont jamais cédées ni vendues à des tiers. Elles peuvent être transmises uniquement à nos partenaires ou prestataires strictement dans le cadre de l’exécution de nos services, et toujours dans le respect de la réglementation en vigueur."],
+      ["p", "Vos informations sont conservées pour la durée strictement nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux exigences légales applicables."],
+      ["p", "Conformément à la législation, vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition concernant vos données personnelles. Pour toute demande ou question relative à vos droits, vous pouvez nous contacter à l’adresse suivante : contact@iceplease.ma"]
+    ]
+  },
+  "terms": {
+    "title": "Conditions de service",
+    "blocks": [
+      ["h2", "Accès à l’application via Meta"],
+      ["p", "L’accès à l’application FAAB and CO via Meta est soumis à l’acceptation des présentes conditions de service. En utilisant la connexion Meta, vous acceptez que vos informations soient traitées conformément à notre politique de confidentialité et aux règles établies par Meta. Toute utilisation non conforme pourra entraîner la suspension de votre accès."],
+      ["h3", "Respect des données personnelles"],
+      ["p", "FAAB and CO s’engage à protéger vos données personnelles conformément à la législation en vigueur. Vos informations sont utilisées uniquement pour faciliter votre expérience utilisateur. Aucun partage de données avec des tiers non autorisés n’est effectué sans votre consentement explicite."],
+      ["h3", "Utilisation équitable de l’application"],
+      ["p", "Vous êtes tenu de respecter une utilisation loyale et responsable de l’application. Il est interdit d’utiliser nos services à des fins frauduleuses, illégales ou pour porter atteinte aux droits d’autrui. Toute violation pourra entraîner la suppression de votre compte et des poursuites appropriées."],
+      ["h2", "Engagements et responsabilités"],
+      ["h3", "Sécurité et confidentialité"],
+      ["p", "Nous mettons en œuvre des mesures de sécurité avancées pour garantir la confidentialité et l’intégrité de vos données lors de l’utilisation de la connexion Meta. Votre sécurité est notre priorité. Nous vous recommandons de ne jamais partager vos identifiants avec des tiers."],
+      ["h3", "Modifications des conditions"],
+      ["p", "FAAB and CO se réserve le droit de modifier à tout moment les présentes conditions de service pour s’adapter à l’évolution des lois ou de nos services. Vous serez informé de toute modification importante via l’application ou par email. L’utilisation continue de l’application après modification vaut acceptation des nouvelles conditions."]
+    ]
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "code": "fr",
+  "dir": "ltr",
+  "label": "Français",
+  "short": "FR",
+  "ogLocale": "fr_FR",
+  "ui": {
+    "skip": "Se rendre au contenu",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "navLabel": "Navigation principale",
+    "langLabel": "Langue",
+    "order": "Commander",
+    "orderWhatsapp": "Commander sur WhatsApp",
+    "seeIce": "Voir les glaçons",
+    "seeAll": "Tout afficher",
+    "contactUs": "Contactez-nous",
+    "send": "Envoyer sur WhatsApp",
+    "home": "Accueil",
+    "ice": "Nos glaçons",
+    "related": "À découvrir aussi",
+    "specs": "En bref",
+    "instagram": "Instagram",
+    "instagramView": "Voir le profil",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "footerNav": "Navigation",
+    "footerContact": "Contact",
+    "footerLegal": "Informations légales",
+    "legalNote": "",
+    "copyright": "Copyright ©FAAB & CO",
+    "backTop": "Haut de page",
+    "steps": "Étapes",
+    "stepOf": "sur",
+    "videoPause": "Mettre la vidéo en pause",
+    "videoPlay": "Lire la vidéo",
+    "videoLabel": "Rendu de synthèse : un cube, un long glaçon et une sphère de glace, vus par une caméra en lent mouvement."
+  },
+  "wa": {
+    "generic": "Bonjour Ice Please, j’aimerais avoir des informations sur vos glaçons.",
+    "product": "Bonjour Ice Please, je souhaite commander :\n• Produit : {product}\n• Quantité : \n• Ville : \n• Date souhaitée : ",
+    "contact": "Bonjour Ice Please,",
+    "quote": "Bonjour Ice Please, je souhaite recevoir un devis."
+  },
+  "nav": {
+    "home": "Accueil",
+    "glacons": "Nos glaçons",
+    "savoir": "Savoir-faire",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "meta": {
+    "home": {
+      "title": "Glaçons premium et Clear Ice au Maroc | Ice Please",
+      "description": "Ice Please Morocco produit et livre du clear ice et des glaçons premium au Maroc pour hôtels, restaurants, bars, traiteurs et événements."
+    },
+    "glacons": {
+      "title": "Nos glaçons : clear ice, glace pilée, glace carbonique | Ice Please Maroc",
+      "description": "Cube XL, Ice Stick, Moon Ball, Custom, glaçons gourmet, glace pilée, glace carbonique et accessoires : toute la gamme Ice Please."
+    },
+    "savoir": {
+      "title": "Savoir-faire : l’hygiène et la constance au cœur de la production | Ice Please Maroc",
+      "description": "De l’eau au stockage jusqu’à la livraison, chaque étape est strictement contrôlée pour garantir une glace propre et un standard respecté à chaque commande."
+    },
+    "about": {
+      "title": "À propos | Ice Please",
+      "description": "Découvrez Ice Please Morocco, spécialiste du clear ice et des glaçons premium pour hôtels, bars, restaurants et événements au Maroc."
+    },
+    "contact": {
+      "title": "Contact | Ice Please Maroc",
+      "description": "Pour toute question relative à nos glaçons premium Ice Please ou à nos services de livraison, contactez-nous par WhatsApp, téléphone ou e-mail."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité | Ice Please",
+      "description": ""
+    },
+    "terms": {
+      "title": "Conditions de service | Ice Please",
+      "description": ""
+    },
+    "notFound": {
+      "title": "Page introuvable | Ice Please",
+      "description": ""
+    }
+  },
+  "home": {
+    "heroTitle": "Du **Clear Ice** pour sublimer vos boissons",
+    "heroSub": "Nous créons des glaçons d’une clarté exceptionnelle, pensés pour révéler vos cocktails, spiritueux et boissons premium.",
+    "intro": "Cristalline, dense et élégante, notre glace fond lentement afin de préserver le goût, la fraîcheur et l’expérience de dégustation.",
+    "productsTitle": "Nos glaçons",
+    "savoir": {
+      "title": "L’art du clear ice",
+      "text": "La glace n’est pas un détail. Elle influence le goût, la dilution et l’esthétique d’un verre.",
+      "link": "Notre engagement"
+    },
+    "pro": {
+      "eyebrow": "Hôtels · Restaurants · Bars · Traiteurs",
+      "title": "Nos solutions HORECA",
+      "text": "Nos glaçons cristallins allient pureté et esthétique. Leur transparence exceptionnelle sublime chaque boisson, apportant une touche de raffinement.",
+      "fact": "Livraison professionnelle 7j/7 au Maroc",
+      "link": "Demander un devis"
+    },
+    "instagram": {
+      "title": "Retrouvez Ice Please sur Instagram"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "paras": [
+        "Pour toute question relative à nos glaçons premium Ice Please ou à nos services de livraison, n’hésitez pas à nous contacter.",
+        "Nous nous engageons à vous répondre dans les meilleurs délais."
+      ]
+    }
+  },
+  "mentions": [
+    "3× filtrée, 2× osmosée",
+    "Stérilisation lumière UV",
+    "Zéro contact",
+    "Dilution extra-lente"
+  ],
+  "glacons": {
+    "title": "Nos glaçons",
+    "lead": "Cristalline, dense et élégante, notre glace fond lentement afin de préserver le goût, la fraîcheur et l’expérience de dégustation."
+  },
+  "pro": {
+    "eyebrow": "Hôtels · Restaurants · Bars · Traiteurs",
+    "title": "Nos solutions HORECA",
+    "paras": [
+      "Nos glaçons cristallins allient pureté et esthétique. Leur transparence exceptionnelle sublime chaque boisson, apportant une touche de raffinement.",
+      "Au-delà d’un produit premium, Ice Please s’engage également à offrir un service fiable, réactif et adapté aux exigences des professionnels.",
+      "De la qualité de la glace à la rigueur du service, notre objectif est d’accompagner les établissements soucieux de proposer le meilleur à leurs clients.",
+      "Offrez à vos clients une expérience visuelle et sensorielle unique, portée par des glaçons d’une qualité incomparable et un partenaire de confiance au quotidien."
+    ],
+    "fact": "Livraison professionnelle 7j/7 au Maroc",
+    "imageAlt": "Cocktail servi avec un glaçon premium Ice Please pour les professionnels HORECA au Maroc",
+    "quoteTitle": "Demander un devis"
+  },
+  "savoir": {
+    "title": "Notre engagement",
+    "paras": [
+      "La confiance repose sur la rigueur. Chez Ice Please, nous plaçons l’hygiène, la constance et la fiabilité au cœur de notre production.",
+      "De l’eau au stockage jusqu’à la livraison, chaque étape est strictement contrôlée pour garantir une glace propre et un standard respecté à chaque commande."
+    ],
+    "artTitle": "L’art du clear ice",
+    "artText": "La glace n’est pas un détail. Elle influence le goût, la dilution et l’esthétique d’un verre.",
+    "stepLabels": [
+      "Filtration et osmose",
+      "Lumière",
+      "Service",
+      "Fonte"
+    ]
+  },
+  "about": {
+    "title": "À propos de nous",
+    "sections": [
+      {
+        "title": "L’art du clear ice",
+        "paras": [
+          "La glace n’est pas un détail. Elle influence le goût, la dilution et l’esthétique d’un verre.",
+          "Nous produisons une glace claire, maîtrisée et constante, pensée pour sublimer cocktails, spiritueux et boissons signature.",
+          "Notre rôle est simple : accompagner les professionnels du service en apportant un standard de qualité à chaque verre."
+        ]
+      },
+      {
+        "title": "Notre Vision",
+        "paras": [
+          "Élever les standards du beverage au Maroc.",
+          "Nous voulons contribuer à une culture du service plus exigeante, où la qualité est la norme et non l’exception.",
+          "Ice Please s’inscrit dans cette ambition : apporter précision, constance et excellence à chaque verre."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "paras": [
+      "Pour toute question relative à nos glaçons premium Ice Please ou à nos services de livraison, n’hésitez pas à nous contacter.",
+      "Nous nous engageons à vous répondre dans les meilleurs délais."
+    ],
+    "tabs": {
+      "message": "Une question",
+      "quote": "Demander un devis"
+    }
+  },
+  "forms": {
+    "contact": {
+      "greeting": "Bonjour Ice Please,",
+      "fields": {
+        "name": "Nom",
+        "phone": "Numéro de téléphone",
+        "email": "E-mail",
+        "company": "Société",
+        "subject": "Sujet",
+        "message": "Question"
+      }
+    },
+    "quote": {
+      "greeting": "Bonjour Ice Please, je souhaite recevoir un devis.",
+      "fields": {
+        "name": "Nom",
+        "phone": "Numéro de téléphone",
+        "email": "E-mail",
+        "venue": "Établissement",
+        "city": "Ville",
+        "needs": "Produits et quantités souhaités",
+        "date": "Date souhaitée"
+      }
+    },
+    "required": "Ce champ est obligatoire.",
+    "invalidEmail": "Cette adresse e-mail n’est pas valide.",
+    "invalidPhone": "Ce numéro de téléphone n’est pas valide.",
+    "status": "WhatsApp s’ouvre avec votre message. Il ne reste qu’à l’envoyer.",
+    "blocked": "Si WhatsApp ne s’est pas ouvert, touchez ce lien :"
+  },
+  "footer": {
+    "tagline": "Ice Please Morocco produit et livre du clear ice et des glaçons premium au Maroc pour hôtels, restaurants, bars, traiteurs et événements.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions de service"
+  },
+  "notFound": {
+    "title": "Cette page n’existe pas ou n’existe plus.",
+    "back": "Retour à l’accueil"
+  },
+  "alt": {
+    "hero": "Blocs de glace cristalline, cube, bâtons et sphère, posés sur un fond bleu",
+    "heroTall": "Blocs de glace cristalline et sphère de glace sur un fond bleu, avec leurs ombres lumineuses",
+    "cube-xl-photo": "Cube de glace cristalline gravé du logo Ice Please, tenu par une pince au-dessus d’un verre de whisky",
+    "cube-xl-card": "Cube de glace cristalline sur fond bleu, avec son ombre portée",
+    "ice-stick-photo": "Barman plaçant un long glaçon cristallin dans un verre à l’aide d’une pince",
+    "ice-stick-card": "Long glaçon rectangulaire cristallin sur fond bleu",
+    "moon-ball": "Sphère de glace cristalline dans un verre à whisky, sur fond bleu",
+    "custom-ice": "Glaçon contenant une rose, tenu par une pince au-dessus d’un verre",
+    "gourmet-ice": "Deux sacs de glaçons gourmet Ice Please de 2 kg sur fond bleu",
+    "crushed-ice": "Glace pilée cristalline sur fond de ciel bleu",
+    "dry-ice-pile": "Pastilles de glace carbonique dans un nuage de fumée",
+    "dry-ice-glass": "Cocktail rouge fumant servi avec de la glace carbonique",
+    "ice-stamp": "Ice Stamps en laiton et glaçons marqués d’une empreinte"
+  },
+  "specLabels": {
+    "pack": "Conditionnement",
+    "custom": "Sur mesure",
+    "size": "Format",
+    "minimum": "Minimum de commande",
+    "material": "Matière",
+    "formats": "Formats",
+    "content": "Contenu"
+  },
+  "products": {
+    "cube-xl": {
+      "card": "Cube XL",
+      "h1": "Cube XL",
+      "metaTitle": "Cube XL, glaçon cristallin | Ice Please Maroc",
+      "paras": [
+        "Glaçon cristallin au format cubique, idéal pour les spiritueux servis sur glace et les cocktails servis dans des verres rocks.",
+        "Sa fonte lente préserve l’équilibre de la boisson tout en apportant une touche visuelle élégante."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs de 20 unités"
+        ],
+        [
+          "custom",
+          "Formats sur mesure selon votre verrerie"
+        ]
+      ]
+    },
+    "ice-stick": {
+      "card": "Ice Stick",
+      "h1": "Ice Stick",
+      "metaTitle": "Ice Stick, long glaçon cristallin | Ice Please Maroc",
+      "paras": [
+        "Long glaçon cristallin au format rectangulaire, idéal pour les verres Collins, Highball ou long drinks.",
+        "Sa forme permet de remplir le verre avec une seule pièce de glace, limitant les espaces entre les glaçons et réduisant la surface de contact avec la boisson.",
+        "Résultat : une fonte plus lente, une meilleure tenue des bulles et une boisson qui reste fraîche plus longtemps.",
+        "Idéal pour les boissons gazeuses, les gin tonics, les highballs japonais et les cocktails rafraîchissants."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs de 20 unités"
+        ],
+        [
+          "custom",
+          "Formats sur mesure possibles"
+        ]
+      ]
+    },
+    "moon-ball": {
+      "card": "Moon Ball",
+      "h1": "Moon Ball",
+      "metaTitle": "Moon Ball, glaçon sphérique | Ice Please Maroc",
+      "paras": [
+        "Glaçon cristallin au format sphérique, idéal pour les spiritueux servis sur glace et les cocktails travaillés.",
+        "Grâce à sa faible surface de contact, le Moon Ball fond plus lentement et limite la dilution, afin de préserver les arômes et l’équilibre de la boisson plus longtemps.",
+        "Parfait pour le whisky on the rocks, les cocktails premium, les verres ballon et les coupes à champagne."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs de 20 unités"
+        ]
+      ]
+    },
+    "custom-ice": {
+      "card": "Custom",
+      "h1": "Custom ice",
+      "metaTitle": "Custom Ice, glace personnalisée | Ice Please Maroc",
+      "paras": [
+        "Créez une glace unique avec des pièces personnalisées, pensées pour apporter une touche distinctive à vos cocktails, boissons signature ou présentations événementielles.",
+        "Nos formats de Custom Ice peuvent intégrer des éléments visuels directement dans la glace : fruits, fleurs comestibles, herbes aromatiques, logos, couleurs ou autres items sélectionnés selon vos besoins.",
+        "Une solution idéale pour les établissements, marques et événements qui souhaitent proposer une expérience sur mesure, mémorable et parfaitement alignée avec leur univers."
+      ],
+      "specs": [
+        [
+          "content",
+          "Fruits, fleurs comestibles, herbes aromatiques, logos, couleurs ou autres items"
+        ]
+      ]
+    },
+    "gourmet-ice": {
+      "card": "Glaçons gourmet",
+      "h1": "Glaçons gourmet",
+      "metaTitle": "Glaçons gourmet | Ice Please Maroc",
+      "paras": [
+        "Glaçons cristallins, pleins et de calibre supérieur. Conçus pour offrir une glace régulière, dense et adaptée aux exigences du service professionnel.",
+        "Leur format généreux de 36 g assure une meilleure tenue en verre, une fonte plus lente qu’un glaçon classique et une présentation plus soignée pour les boissons du quotidien.",
+        "Idéal pour les cocktails, softs, spiritueux, sceaux à glaçons et services à fort volume."
+      ],
+      "specs": [
+        [
+          "size",
+          "36 g la pièce"
+        ],
+        [
+          "pack",
+          "Packs de 2 kg"
+        ]
+      ]
+    },
+    "crushed-ice": {
+      "card": "Glace pilée",
+      "h1": "Glace pilée",
+      "metaTitle": "Glace pilée premium | Ice Please Maroc",
+      "paras": [
+        "Glace pilée premium, idéale pour les cocktails rafraîchissants, les boissons frappées et les présentations nécessitant une texture plus fine et généreuse.",
+        "Sa forme fragmentée permet de refroidir rapidement les boissons tout en apportant du volume et une finition visuelle soignée au service.",
+        "Parfaite pour les mojitos, caïpirinhas, juleps, cocktails tropicaux, softs et usages événementiels."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs de 12,5 kg"
+        ]
+      ]
+    },
+    "dry-ice": {
+      "card": "Glace carbonique",
+      "h1": "Glace carbonique",
+      "metaTitle": "Glace carbonique premium | Ice Please Maroc",
+      "paras": [
+        "Glace carbonique premium, idéale pour créer un effet fumée spectaculaire lors du service de cocktails, boissons signature, présentations événementielles ou mises en scène de bar.",
+        "Elle apporte un impact visuel fort et une expérience différenciante, tout en permettant de maintenir certains produits à très basse température selon les besoins.",
+        "Adaptée aux bars, hôtels, restaurants, événements, traiteurs et activations de marque souhaitant ajouter une dimension visuelle premium à leur service."
+      ],
+      "specs": [
+        [
+          "minimum",
+          "3 kg"
+        ]
+      ]
+    },
+    "ice-stamp": {
+      "card": "Accessoires",
+      "h1": "Ice stamps",
+      "metaTitle": "Ice Stamps en laiton | Ice Please Maroc",
+      "paras": [
+        "Personnalisez vos glaçons avec un marquage unique, disponible sous format tampon individuel ou plateau à empreintes.",
+        "Fabriqués en laiton, nos Ice Stamps permettent d’imprimer votre logo, symbole ou signature directement sur la glace, pour apporter une finition premium à vos cocktails et spiritueux.",
+        "Le format tampon est idéal pour un marquage à la demande, tandis que le format plateau permet de marquer plusieurs glaçons à la fois, de manière régulière et efficace.",
+        "Une solution personnalisable, élégante et pensée pour les établissements qui souhaitent soigner chaque détail du service."
+      ],
+      "specs": [
+        [
+          "material",
+          "Laiton"
+        ],
+        [
+          "formats",
+          "Tampon individuel ou plateau à empreintes"
+        ]
+      ]
+    }
+  }
+}

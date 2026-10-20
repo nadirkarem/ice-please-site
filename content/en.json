@@ -1,0 +1,395 @@
+{
+  "code": "en",
+  "dir": "ltr",
+  "label": "English",
+  "short": "EN",
+  "ogLocale": "en_US",
+  "ui": {
+    "skip": "Skip to content",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "navLabel": "Main navigation",
+    "langLabel": "Language",
+    "order": "Order",
+    "orderWhatsapp": "Order on WhatsApp",
+    "seeIce": "See our ice",
+    "seeAll": "See all",
+    "contactUs": "Contact us",
+    "send": "Send on WhatsApp",
+    "home": "Home",
+    "ice": "Our ice",
+    "related": "You may also like",
+    "specs": "At a glance",
+    "instagram": "Instagram",
+    "instagramView": "View profile",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "footerNav": "Navigation",
+    "footerContact": "Contact",
+    "footerLegal": "Legal information",
+    "legalNote": " (FR)",
+    "copyright": "Copyright ©FAAB & CO",
+    "backTop": "Back to top",
+    "steps": "Steps",
+    "stepOf": "of",
+    "videoPause": "Pause the video",
+    "videoPlay": "Play the video",
+    "videoLabel": "Computer-generated render: an ice cube, a long ice stick and an ice sphere, seen by a slowly moving camera."
+  },
+  "wa": {
+    "generic": "Hello Ice Please, I would like some information about your ice.",
+    "product": "Hello Ice Please, I would like to order:\n• Product: {product}\n• Quantity: \n• City: \n• Preferred date: ",
+    "contact": "Hello Ice Please,",
+    "quote": "Hello Ice Please, I would like to receive a quote."
+  },
+  "nav": {
+    "home": "Home",
+    "glacons": "Our ice",
+    "savoir": "Know-how",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "meta": {
+    "home": {
+      "title": "Premium ice and Clear Ice in Morocco | Ice Please",
+      "description": "Ice Please Morocco produces and delivers clear ice and premium ice cubes in Morocco for hotels, restaurants, bars, caterers and events."
+    },
+    "glacons": {
+      "title": "Our ice: clear ice, crushed ice, dry ice | Ice Please Morocco",
+      "description": "Cube XL, Ice Stick, Moon Ball, Custom, gourmet ice, crushed ice, dry ice and accessories: the full Ice Please range."
+    },
+    "savoir": {
+      "title": "Know-how: hygiene and consistency at the heart of production | Ice Please Morocco",
+      "description": "From water to storage to delivery, every step is strictly controlled to guarantee clean ice and a standard respected with every order."
+    },
+    "about": {
+      "title": "About | Ice Please",
+      "description": "Discover Ice Please Morocco, specialist in clear ice and premium ice for hotels, bars, restaurants and events in Morocco."
+    },
+    "contact": {
+      "title": "Contact | Ice Please Morocco",
+      "description": "For any question about our premium Ice Please ice or our delivery services, contact us by WhatsApp, phone or email."
+    },
+    "privacy": {
+      "title": "Privacy policy | Ice Please",
+      "description": ""
+    },
+    "terms": {
+      "title": "Terms of service | Ice Please",
+      "description": ""
+    },
+    "notFound": {
+      "title": "Page not found | Ice Please",
+      "description": ""
+    }
+  },
+  "home": {
+    "heroTitle": "**Clear Ice** to elevate your drinks",
+    "heroSub": "We create ice of exceptional clarity, designed to reveal your cocktails, spirits and premium drinks.",
+    "intro": "Crystalline, dense and elegant, our ice melts slowly to preserve flavour, freshness and the tasting experience.",
+    "productsTitle": "Our ice",
+    "savoir": {
+      "title": "The art of clear ice",
+      "text": "Ice is not a detail. It shapes the taste, the dilution and the look of a glass.",
+      "link": "Our commitment"
+    },
+    "pro": {
+      "eyebrow": "Hotels · Restaurants · Bars · Caterers",
+      "title": "Our HORECA solutions",
+      "text": "Our crystal-clear ice combines purity and aesthetics. Its exceptional transparency elevates every drink, adding a touch of refinement.",
+      "fact": "Professional delivery 7 days a week across Morocco",
+      "link": "Request a quote"
+    },
+    "instagram": {
+      "title": "Find Ice Please on Instagram"
+    },
+    "contact": {
+      "title": "Contact us",
+      "paras": [
+        "For any question about our premium Ice Please ice or our delivery services, please do not hesitate to contact us.",
+        "We commit to replying as quickly as possible."
+      ]
+    }
+  },
+  "mentions": [
+    "3× filtered, 2× osmosis",
+    "UV light sterilisation",
+    "Zero contact",
+    "Extra-slow dilution"
+  ],
+  "glacons": {
+    "title": "Our ice",
+    "lead": "Crystalline, dense and elegant, our ice melts slowly to preserve flavour, freshness and the tasting experience."
+  },
+  "pro": {
+    "eyebrow": "Hotels · Restaurants · Bars · Caterers",
+    "title": "Our HORECA solutions",
+    "paras": [
+      "Our crystal-clear ice combines purity and aesthetics. Its exceptional transparency elevates every drink, adding a touch of refinement.",
+      "Beyond a premium product, Ice Please is also committed to offering a reliable, responsive service tailored to the demands of professionals.",
+      "From the quality of the ice to the rigour of the service, our goal is to support venues that care about offering the best to their guests.",
+      "Offer your guests a unique visual and sensory experience, delivered by ice of incomparable quality and a trusted partner day after day."
+    ],
+    "fact": "Professional delivery 7 days a week across Morocco",
+    "imageAlt": "Cocktail served with a premium Ice Please ice cube for HORECA professionals in Morocco",
+    "quoteTitle": "Request a quote"
+  },
+  "savoir": {
+    "title": "Our commitment",
+    "paras": [
+      "Trust rests on rigour. At Ice Please, we put hygiene, consistency and reliability at the heart of our production.",
+      "From water to storage to delivery, every step is strictly controlled to guarantee clean ice and a standard respected with every order."
+    ],
+    "artTitle": "The art of clear ice",
+    "artText": "Ice is not a detail. It shapes the taste, the dilution and the look of a glass.",
+    "stepLabels": [
+      "Filtration and osmosis",
+      "Light",
+      "Service",
+      "Melt"
+    ]
+  },
+  "about": {
+    "title": "About us",
+    "sections": [
+      {
+        "title": "The art of clear ice",
+        "paras": [
+          "Ice is not a detail. It shapes the taste, the dilution and the look of a glass.",
+          "We produce clear, controlled and consistent ice, designed to elevate cocktails, spirits and signature drinks.",
+          "Our role is simple: to support service professionals by bringing a standard of quality to every glass."
+        ]
+      },
+      {
+        "title": "Our vision",
+        "paras": [
+          "Raising beverage standards in Morocco.",
+          "We want to contribute to a more demanding service culture, where quality is the norm, not the exception.",
+          "Ice Please is part of this ambition: bringing precision, consistency and excellence to every glass."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "paras": [
+      "For any question about our premium Ice Please ice or our delivery services, please do not hesitate to contact us.",
+      "We commit to replying as quickly as possible."
+    ],
+    "tabs": {
+      "message": "A question",
+      "quote": "Request a quote"
+    }
+  },
+  "forms": {
+    "contact": {
+      "greeting": "Hello Ice Please,",
+      "fields": {
+        "name": "Name",
+        "phone": "Phone number",
+        "email": "Email",
+        "company": "Company",
+        "subject": "Subject",
+        "message": "Question"
+      }
+    },
+    "quote": {
+      "greeting": "Hello Ice Please, I would like to receive a quote.",
+      "fields": {
+        "name": "Name",
+        "phone": "Phone number",
+        "email": "Email",
+        "venue": "Venue",
+        "city": "City",
+        "needs": "Products and quantities needed",
+        "date": "Preferred date"
+      }
+    },
+    "required": "This field is required.",
+    "invalidEmail": "This email address is not valid.",
+    "invalidPhone": "This phone number is not valid.",
+    "status": "WhatsApp is opening with your message. All that is left is to send it.",
+    "blocked": "If WhatsApp did not open, tap this link:"
+  },
+  "footer": {
+    "tagline": "Ice Please Morocco produces and delivers clear ice and premium ice in Morocco for hotels, restaurants, bars, caterers and events.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
+  },
+  "notFound": {
+    "title": "This page does not exist or no longer exists.",
+    "back": "Back to home"
+  },
+  "alt": {
+    "hero": "Crystal-clear ice blocks, a cube, sticks and a sphere, set on a blue background",
+    "heroTall": "Crystal-clear ice blocks and an ice sphere on a blue background, with their bright shadows",
+    "cube-xl-photo": "Crystal-clear ice cube engraved with the Ice Please logo, held by tongs above a glass of whisky",
+    "cube-xl-card": "Crystal-clear ice cube on a blue background, with its cast shadow",
+    "ice-stick-photo": "Bartender lowering a long crystal-clear ice stick into a glass with tongs",
+    "ice-stick-card": "Long rectangular crystal-clear ice stick on a blue background",
+    "moon-ball": "A crystal clear ice sphere in a whisky glass, on a blue background",
+    "custom-ice": "Ice cube containing a rose, held by tongs above a glass",
+    "gourmet-ice": "Two 2 kg bags of Ice Please gourmet ice on a blue background",
+    "crushed-ice": "Crystal-clear crushed ice against a blue sky",
+    "dry-ice-pile": "Dry ice pellets in a cloud of smoke",
+    "dry-ice-glass": "Smoking red cocktail served with dry ice",
+    "ice-stamp": "Brass Ice Stamps and ice cubes marked with an imprint"
+  },
+  "specLabels": {
+    "pack": "Packaging",
+    "custom": "Custom sizes",
+    "size": "Size",
+    "minimum": "Minimum order",
+    "material": "Material",
+    "formats": "Formats",
+    "content": "Content"
+  },
+  "products": {
+    "cube-xl": {
+      "card": "Cube XL",
+      "h1": "Cube XL",
+      "metaTitle": "Cube XL, crystal-clear ice cube | Ice Please Morocco",
+      "paras": [
+        "Crystal-clear ice in a cube format, ideal for spirits served on the rocks and cocktails served in rocks glasses.",
+        "Its slow melt preserves the balance of the drink while adding an elegant visual touch."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs of 20 pieces"
+        ],
+        [
+          "custom",
+          "Made-to-measure formats to suit your glassware"
+        ]
+      ]
+    },
+    "ice-stick": {
+      "card": "Ice Stick",
+      "h1": "Ice Stick",
+      "metaTitle": "Ice Stick, long crystal-clear ice | Ice Please Morocco",
+      "paras": [
+        "Long, crystal-clear ice in a rectangular format, ideal for Collins, highball and long-drink glasses.",
+        "Its shape fills the glass with a single piece of ice, limiting the gaps between pieces and reducing the contact surface with the drink.",
+        "The result: slower melting, better bubble retention and a drink that stays cool for longer.",
+        "Ideal for sparkling drinks, gin and tonics, Japanese highballs and refreshing cocktails."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs of 20 pieces"
+        ],
+        [
+          "custom",
+          "Made-to-measure formats available"
+        ]
+      ]
+    },
+    "moon-ball": {
+      "card": "Moon Ball",
+      "h1": "Moon Ball",
+      "metaTitle": "Moon Ball, spherical ice | Ice Please Morocco",
+      "paras": [
+        "Crystal-clear ice in a spherical format, ideal for spirits served on the rocks and crafted cocktails.",
+        "Thanks to its small contact surface, the Moon Ball melts more slowly and limits dilution, preserving the aromas and balance of the drink for longer.",
+        "Perfect for whisky on the rocks, premium cocktails, balloon glasses and champagne coupes."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs of 20 pieces"
+        ]
+      ]
+    },
+    "custom-ice": {
+      "card": "Custom",
+      "h1": "Custom ice",
+      "metaTitle": "Custom Ice, personalised ice | Ice Please Morocco",
+      "paras": [
+        "Create a unique ice with personalised pieces, designed to add a distinctive touch to your cocktails, signature drinks or event presentations.",
+        "Our Custom Ice formats can embed visual elements directly in the ice: fruit, edible flowers, aromatic herbs, logos, colours or other items chosen to suit your needs.",
+        "An ideal solution for venues, brands and events that want to offer a tailor-made, memorable experience that fits their universe perfectly."
+      ],
+      "specs": [
+        [
+          "content",
+          "Fruit, edible flowers, aromatic herbs, logos, colours or other items"
+        ]
+      ]
+    },
+    "gourmet-ice": {
+      "card": "Gourmet ice",
+      "h1": "Gourmet ice",
+      "metaTitle": "Gourmet ice | Ice Please Morocco",
+      "paras": [
+        "Crystal-clear, solid ice cubes of superior size. Designed to deliver regular, dense ice suited to the demands of professional service.",
+        "Their generous 36 g size means better hold in the glass, slower melting than a standard ice cube and a neater presentation for everyday drinks.",
+        "Ideal for cocktails, soft drinks, spirits, ice buckets and high-volume service."
+      ],
+      "specs": [
+        [
+          "size",
+          "36 g per piece"
+        ],
+        [
+          "pack",
+          "Packs of 2 kg"
+        ]
+      ]
+    },
+    "crushed-ice": {
+      "card": "Crushed ice",
+      "h1": "Crushed ice",
+      "metaTitle": "Premium crushed ice | Ice Please Morocco",
+      "paras": [
+        "Premium crushed ice, ideal for refreshing cocktails, frozen drinks and presentations that call for a finer, more generous texture.",
+        "Its fragmented form chills drinks quickly while adding volume and a polished visual finish to the service.",
+        "Perfect for mojitos, caipirinhas, juleps, tropical cocktails, soft drinks and event use."
+      ],
+      "specs": [
+        [
+          "pack",
+          "Packs of 12.5 kg"
+        ]
+      ]
+    },
+    "dry-ice": {
+      "card": "Dry ice",
+      "h1": "Dry ice",
+      "metaTitle": "Premium dry ice | Ice Please Morocco",
+      "paras": [
+        "Premium dry ice, ideal for creating a spectacular smoke effect when serving cocktails, signature drinks, event presentations or bar staging.",
+        "It brings strong visual impact and a distinctive experience, while keeping certain products at very low temperatures as needed.",
+        "Suited to bars, hotels, restaurants, events, caterers and brand activations looking to add a premium visual dimension to their service."
+      ],
+      "specs": [
+        [
+          "minimum",
+          "3 kg"
+        ]
+      ]
+    },
+    "ice-stamp": {
+      "card": "Accessories",
+      "h1": "Ice stamps",
+      "metaTitle": "Brass Ice Stamps | Ice Please Morocco",
+      "paras": [
+        "Personalise your ice with a unique mark, available as an individual stamp or an imprint tray.",
+        "Made of brass, our Ice Stamps let you imprint your logo, symbol or signature directly on the ice, adding a premium finish to your cocktails and spirits.",
+        "The stamp format is ideal for marking on demand, while the tray format lets you mark several pieces at once, evenly and efficiently.",
+        "A customisable, elegant solution for venues that want to perfect every detail of their service."
+      ],
+      "specs": [
+        [
+          "material",
+          "Brass"
+        ],
+        [
+          "formats",
+          "Individual stamp or imprint tray"
+        ]
+      ]
+    }
+  }
+}

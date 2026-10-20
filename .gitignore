@@ -1,0 +1,15 @@
+node_modules/
+node_modules_v2
+node_modules.nosync/
+dist/
+dist.nosync/
+odoo-pack/
+.DS_Store
+.claude/
+_tmp/
+_render/
+tools/
+# internal documents (client validation register, audit, Odoo guide): kept locally, not published
+ETAT_DES_LIEUX.md
+VALIDATIONS_CLIENT.md
+ODOO.md
