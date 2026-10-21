@@ -35,7 +35,8 @@
     "stepOf": "of",
     "videoPause": "Pause the video",
     "videoPlay": "Play the video",
-    "videoLabel": "Computer-generated render: an ice cube, a long ice stick and an ice sphere, seen by a slowly moving camera."
+    "videoLabel": "Computer-generated render: two ice cubes and an ice sphere, perfectly transparent and floating, seen by a slowly orbiting camera.",
+    "videoLabelGlass": "Computer-generated render: a glass of whisky with a transparent ice sphere, seen by a slowly orbiting camera."
   },
   "wa": {
     "generic": "Hello Ice Please, I would like some information about your ice.",

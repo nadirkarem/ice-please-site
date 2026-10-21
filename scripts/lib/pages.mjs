@@ -113,45 +113,59 @@ function contactDetails(ctx) {
 }
 
 /**
- * Know-how as a story: a sticky stage whose photograph clears step by step (frosted → sharp) while
- * the four claims scroll past. The four states are the same photograph at four levels of blur
- * (public/img/stage-N-1000.webp). Without JavaScript the stage simply shows the last, clear state.
+ * Know-how as a story: a sticky stage that shows one short film per step while the four claims scroll past
+ * (filtration and osmosis, UV light, serving without contact, slow melt). Only the film of the current step plays.
+ * Each film is a computer-generated render made for this site (public/media/story-N.*); without JavaScript the
+ * stage shows the poster of the last step.
  */
 function story(ctx) {
   const { c } = ctx;
   const claims = c.mentions;
-  const layers = [0, 1, 2, 3].map((i) => `<img class="ip-story__layer${i === 0 ? ' is-on' : ''}" src="/img/stage-${i}-1000.webp" alt="" width="1000" height="1194" ${i === 0 ? '' : 'loading="lazy" '}decoding="async">`).join('');
+  const layers = [1, 2, 3, 4].map((n, i) => `<video class="ip-story__layer${i === 0 ? ' is-on' : ''}" muted loop playsinline preload="none" poster="/media/story-${n}-poster.jpg" tabindex="-1">
+            <source src="/media/story-${n}.mp4" type="video/mp4">
+            <source src="/media/story-${n}.webm" type="video/webm">
+          </video>`).join('');
   const chapters = claims.map((claim, i) => `<li class="ip-chapter" data-ip-chapter>
           <p class="ip-chapter__step">${esc(c.savoir.stepLabels[i])}</p>
           <p class="ip-chapter__claim">${esc(claim)}</p>
         </li>`).join('');
   return `<section class="ip-story" data-ip-story aria-label="${esc(c.ui.steps)}">
       <div class="ip-story__grid">
-        <div class="ip-story__stage" aria-hidden="true">
-          <div class="ip-story__layers">${layers}</div>
-          <div class="ip-story__fog"></div>
-          <div class="ip-story__bar"><span><span data-count>1</span> ${esc(c.ui.stepOf)} ${claims.length}</span><i></i></div>
+        <div class="ip-story__stage">
+          <div class="ip-story__layers" aria-hidden="true">${layers}</div>
+          <div class="ip-story__bar" aria-hidden="true"><span><span data-count>1</span> ${esc(c.ui.stepOf)} ${claims.length}</span><i></i></div>
+          <button class="ip-story__toggle" type="button" data-ip-story-toggle aria-pressed="false" data-pause="${esc(c.ui.videoPause)}" data-play="${esc(c.ui.videoPlay)}"><span data-label>${esc(c.ui.videoPause)}</span></button>
         </div>
         <ol class="ip-story__chapters">${chapters}</ol>
       </div>
     </section>`;
 }
 
-/** Full-bleed loop of the range (synthetic render), with a visible pause control. */
-function film(ctx, { id, title, text, link }) {
+/**
+ * Scroll-revealed film. The video starts as a small window in the page, opens to full bleed as the
+ * visitor scrolls, and the title is revealed with it (an ink copy on the page, a white copy on the video,
+ * cut by the same window). Without script or under reduced motion it is a plain full-bleed band.
+ */
+function reveal(ctx, { id, title, text, link, name, label }) {
   const { c } = ctx;
-  return `<section class="ip-film" data-ip-video aria-labelledby="${id}">
-      <img class="ip-film__poster" src="/media/ice-loop-poster.jpg" alt="" width="1280" height="720" loading="lazy" aria-hidden="true">
-      <video muted loop playsinline preload="none" poster="/media/ice-loop-poster.jpg" aria-label="${esc(c.ui.videoLabel)}">
-        <source src="/media/ice-loop.webm" type="video/webm">
-        <source src="/media/ice-loop.mp4" type="video/mp4">
-      </video>
-      <div class="ip-wrap ip-film__body">
-        <h2 id="${id}">${esc(title)}</h2>
-        <p class="ip-lead">${md(ctx, text)}</p>
-        ${link ? `<a class="ip-link" href="${urlFor('savoir', ctx.lang)}"><span>${esc(link)}</span>${icon('arrow')}</a>` : ''}
+  return `<section class="ip-reveal" data-ip-reveal data-ip-video aria-labelledby="${id}">
+      <div class="ip-reveal__stage">
+        <p class="ip-reveal__title ip-reveal__title--page" aria-hidden="true">${esc(title)}</p>
+        <div class="ip-reveal__media">
+          <img class="ip-reveal__poster" src="/media/${name}-poster.jpg" alt="" width="1280" height="720" loading="lazy" aria-hidden="true">
+          <video muted loop playsinline preload="none" poster="/media/${name}-poster.jpg" aria-label="${esc(label)}">
+            <source src="/media/${name}.mp4" type="video/mp4">
+            <source src="/media/${name}.webm" type="video/webm">
+          </video>
+          <div class="ip-reveal__veil"></div>
+          <h2 class="ip-reveal__title" id="${id}">${esc(title)}</h2>
+        </div>
+        <div class="ip-wrap ip-reveal__body">
+          <p class="ip-lead">${md(ctx, text)}</p>
+          ${link ? `<a class="ip-link" href="${urlFor('savoir', ctx.lang)}"><span>${esc(link)}</span>${icon('arrow')}</a>` : ''}
+        </div>
+        <button class="ip-reveal__toggle" type="button" data-ip-video-toggle aria-pressed="false" data-pause="${esc(c.ui.videoPause)}" data-play="${esc(c.ui.videoPlay)}"><span data-label>${esc(c.ui.videoPause)}</span></button>
       </div>
-      <button class="ip-film__toggle" type="button" data-ip-video-toggle aria-pressed="false" data-pause="${esc(c.ui.videoPause)}" data-play="${esc(c.ui.videoPlay)}"><span data-label>${esc(c.ui.videoPause)}</span></button>
     </section>`;
 }
 
@@ -273,6 +287,8 @@ export function home(ctx) {
       <div class="ip-wrap"><p class="ip-intro__text" data-reveal>${md(ctx, h.intro)}</p></div>
     </section>
 
+    ${reveal(ctx, { id: 'h-craft', title: h.savoir.title, text: h.savoir.text, link: h.savoir.link, name: 'ice-hero', label: c.ui.videoLabel })}
+
     <section class="ip-section ip-ice" id="nos-glacons" aria-labelledby="h-ice">
       <div class="ip-wrap">
         <div class="ip-sectionhead" data-reveal>
@@ -286,7 +302,6 @@ export function home(ctx) {
       </div>
     </section>
 
-    ${film(ctx, { id: 'h-craft', title: h.savoir.title, text: h.savoir.text, link: h.savoir.link })}
 
     <section class="ip-section ip-pro" aria-labelledby="h-pro">
       <div class="ip-wrap ip-pro__grid">
@@ -371,12 +386,7 @@ export function savoir(ctx) {
   const s = c.savoir;
   return `
     ${splitHead(ctx, { image: 'ice-stick-photo', title: s.title, lead: s.paras })}
-    <section class="ip-section ip-section--tight ip-art">
-      <div class="ip-wrap">
-        <h2 id="h-art" data-reveal>${esc(s.artTitle)}</h2>
-        <p class="ip-lead" data-reveal>${md(ctx, s.artText)}</p>
-      </div>
-    </section>
+    ${reveal(ctx, { id: 'h-art', title: s.artTitle, text: s.artText, name: 'ice-whisky', label: c.ui.videoLabelGlass })}
     ${story(ctx)}
     ${ctaBand(ctx)}`;
 }

@@ -10,7 +10,7 @@ Site statique en HTML, CSS et JavaScript, construit avec [Vite](https://vite.dev
 
 ```bash
 npm install --legacy-peer-deps
-npm run dev      # http://127.0.0.1:5190
+npm run dev      # http://127.0.0.1:5200
 npm run build    # génère dist/ (42 pages)
 ```
 
@@ -31,7 +31,8 @@ BASE_PATH=/ice-please-site npx vite preview
 | l'en-tête, le pied de page, le `<head>` | `scripts/lib/layout.mjs` |
 | les adresses des pages | `scripts/lib/routes.mjs` |
 | le design | `src/style.css` |
-| le comportement (menu, transitions de page, givre, récit, formulaires) | `src/main.js` |
+| le comportement (menu, transitions de page, givre, récit, défilement fluide, révélation titre et image, formulaires) | `src/main.js` |
+| les vidéos (MP4, WebM, affiche) | `public/media/` |
 
 ## Mise en ligne
 

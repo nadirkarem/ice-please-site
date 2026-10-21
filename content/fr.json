@@ -35,7 +35,8 @@
     "stepOf": "sur",
     "videoPause": "Mettre la vidéo en pause",
     "videoPlay": "Lire la vidéo",
-    "videoLabel": "Rendu de synthèse : un cube, un long glaçon et une sphère de glace, vus par une caméra en lent mouvement."
+    "videoLabel": "Rendu de synthèse : deux cubes et une sphère de glace parfaitement transparents, en suspension, vus par une caméra qui tourne lentement.",
+    "videoLabelGlass": "Rendu de synthèse : un verre de whisky et une sphère de glace transparente, vus par une caméra qui tourne lentement."
   },
   "wa": {
     "generic": "Bonjour Ice Please, j’aimerais avoir des informations sur vos glaçons.",

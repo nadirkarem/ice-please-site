@@ -1,3 +1,4 @@
+import Lenis from 'lenis';
 import './style.css';
 
 const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -6,6 +7,7 @@ const root = document.querySelector('.ip');
 let cleanups = [];
 const track = (fn) => cleanups.push(fn);
 
+initSmoothScroll();
 initHeader();
 initMenu();
 initPage();
@@ -17,6 +19,7 @@ function initPage() {
   initHeroMelt();
   initFrost();
   initStory();
+  initScenes();
   initVideo();
   initFloatingButton();
   initTabs();
@@ -54,6 +57,7 @@ function initMenu() {
     sheet.toggleAttribute('inert', !open);
     behind().forEach((el) => el.toggleAttribute('inert', open));
     document.documentElement.style.overflow = open ? 'hidden' : '';
+    window.__ipLenis?.[open ? 'stop' : 'start']();
   };
   window.__ipCloseMenu = () => setOpen(false);
 
@@ -293,7 +297,7 @@ function initFrost() {
   });
 }
 
-/* Know-how story: the stage photograph clears with the chapter in view (4 levels of frost, one --clear). */
+/* Know-how story: the stage plays the film of the chapter in view (one at a time) and fills the progress bar (--clear). */
 function initStory() {
   const story = document.querySelector('[data-ip-story]');
   if (!story) return;
@@ -301,15 +305,35 @@ function initStory() {
   const layers = [...story.querySelectorAll('.ip-story__layer')];
   const chapters = [...story.querySelectorAll('[data-ip-chapter]')];
   const count = story.querySelector('[data-count]');
-  if (reduced() || !chapters.length) { layers.forEach((l, i) => l.classList.toggle('is-on', i === layers.length - 1)); stage.style.setProperty('--clear', '1'); return; }
+  const button = story.querySelector('[data-ip-story-toggle]');
+  const label = button?.querySelector('[data-label]');
+  if (reduced() || !chapters.length) {
+    layers.forEach((l, i) => l.classList.toggle('is-on', i === layers.length - 1));
+    stage.style.setProperty('--clear', '1');
+    button?.setAttribute('hidden', '');
+    return;
+  }
+  let current = 0, inView = false, userPaused = false;
+  const sync = () => {
+    layers.forEach((l, k) => {
+      if (k === current && inView && !userPaused) l.play().catch(() => {});
+      else l.pause();
+    });
+    if (button) { button.setAttribute('aria-pressed', String(userPaused)); label.textContent = userPaused ? button.dataset.play : button.dataset.pause; }
+  };
   const set = (i) => {
+    current = i;
     layers.forEach((l, k) => l.classList.toggle('is-on', k === i));
     if (count) count.textContent = String(i + 1);
+    sync();
   };
+  button?.addEventListener('click', () => { userPaused = !userPaused; sync(); });
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) set(chapters.indexOf(e.target)); });
   }, { rootMargin: '-42% 0px -42% 0px' });
   chapters.forEach((c) => io.observe(c));
+  const stageIo = new IntersectionObserver(([e]) => { inView = e.isIntersecting; sync(); }, { rootMargin: '120px 0px' });
+  stageIo.observe(stage);
   let frame = 0;
   const update = () => {
     frame = 0;
@@ -321,7 +345,52 @@ function initStory() {
   window.addEventListener('scroll', onScroll, { passive: true });
   update();
   set(0);
-  track(() => { io.disconnect(); window.removeEventListener('scroll', onScroll); });
+  track(() => { io.disconnect(); stageIo.disconnect(); window.removeEventListener('scroll', onScroll); layers.forEach((l) => l.pause()); });
+}
+
+/* Smooth wheel scrolling (Lenis) on desktop pointers only: touch keeps the browser's own momentum, and
+   reduced motion keeps plain scrolling. Static site only: Odoo keeps its own scrolling. */
+function initSmoothScroll() {
+  if (!root || !root.hasAttribute('data-ip-router') || reduced()) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  window.__ipLenis = new Lenis({ autoRaf: true, lerp: 0.085, wheelMultiplier: 0.95, anchors: { offset: -96 } });
+}
+
+/* Scroll-revealed films (.ip-reveal): the section is a tall track with a pinned stage. The scroll position
+   becomes --ip-e (0 → 1), eased and chased frame by frame so the window opens smoothly even when the wheel
+   or a finger moves in steps. Under reduced motion nothing is set up and the band stays full bleed. */
+function initScenes() {
+  const scenes = document.querySelectorAll('[data-ip-reveal]');
+  if (!scenes.length || reduced() || !('IntersectionObserver' in window)) return;
+  const clamp = (v) => Math.min(Math.max(v, 0), 1);
+  const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  scenes.forEach((section) => {
+    section.classList.add('is-live');
+    let current = -1, frame = 0, near = false;
+    const progress = () => {
+      const span = section.offsetHeight - window.innerHeight;
+      return span > 0 ? clamp(-section.getBoundingClientRect().top / span) : 1;
+    };
+    const apply = (p) => {
+      section.style.setProperty('--ip-e', ease(clamp(p / 0.6)).toFixed(4));
+      section.classList.toggle('is-open', p > (section.classList.contains('is-open') ? 0.58 : 0.66));
+    };
+    const tick = () => {
+      frame = 0;
+      const target = progress();
+      current = current < 0 ? target : current + (target - current) * 0.16;
+      if (Math.abs(target - current) < 0.0005) current = target;
+      apply(current);
+      if (near && current !== target) frame = requestAnimationFrame(tick);
+    };
+    const kick = () => { if (near && !frame) frame = requestAnimationFrame(tick); };
+    const io = new IntersectionObserver(([e]) => { near = e.isIntersecting; if (near) { current = -1; kick(); } }, { rootMargin: '25% 0px 25% 0px' });
+    io.observe(section);
+    window.addEventListener('scroll', kick, { passive: true });
+    window.addEventListener('resize', kick);
+    apply(progress());
+    track(() => { io.disconnect(); window.removeEventListener('scroll', kick); window.removeEventListener('resize', kick); cancelAnimationFrame(frame); });
+  });
 }
 
 /* Loop video: plays only while on screen, with a visible pause control; a still under reduced motion. */
@@ -341,7 +410,7 @@ function initVideo() {
       if (!e.isIntersecting) video.pause();
       else if (!userPaused) video.play().then(() => set(true)).catch(() => set(false));
     }, { threshold: 0.25 });
-    io.observe(wrap);
+    io.observe(wrap.querySelector('.ip-reveal__stage') || wrap);
     track(() => io.disconnect());
   });
 }
@@ -429,6 +498,7 @@ function initRouter() {
     const smooth = document.documentElement.style.scrollBehavior;
     document.documentElement.style.scrollBehavior = 'auto';
     window.scrollTo(0, 0);
+    window.__ipLenis?.scrollTo(0, { immediate: true, force: true });
     document.documentElement.style.scrollBehavior = smooth;
     header.classList.add('is-top'); header.classList.remove('is-away');
     initPage();
