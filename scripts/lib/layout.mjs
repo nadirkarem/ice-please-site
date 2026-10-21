@@ -39,8 +39,8 @@ export function langSwitch(ctx, page) {
 function header(ctx, page) {
   const { c, lang, site } = ctx;
   const active = activeNav(page.id);
-  // pages that open on a photograph: white bar text while the bar is clear
-  const tone = ['home', 'glacons', 'savoir', 'about'].includes(page.id) ? 'dark' : 'light';
+  // only the home page opens on a full-bleed photograph: white bar text while the bar is clear
+  const tone = page.id === 'home' ? 'dark' : 'light';
   const link = (id) => `<a href="${urlFor(id, lang)}"${active === id ? ' aria-current="page"' : ''}>${esc(c.nav[id])}</a>`;
   const wa = waLink(ctx, c.wa.generic);
   return `<header class="ip-header is-top" data-ip-header data-tone="${tone}">

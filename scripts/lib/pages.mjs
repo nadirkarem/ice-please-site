@@ -72,23 +72,18 @@ function pageHead(ctx, { eyebrow, title, lead, soft = false }) {
 }
 
 /**
- * Page title over a photograph that melts into the page: the blue turns lighter and blurs
- * toward the bottom, so there is no hard edge where the picture stops.
- * `tall` is the portrait picture shown on phones.
+ * Page head with the photograph shown whole: text on the left, the picture in a rounded frame on the right
+ * (stacked on phones). The picture is never cropped into a thin band, so the subject stays readable.
  */
-function pageHero(ctx, { image, tall, title, lead, focal }) {
-  const media = tall
-    ? pictureResponsive(ctx, image, tall, { alt: alt(ctx, image), priority: true, sizes: '100vw' })
-    : picture(ctx, image, { alt: alt(ctx, image), priority: true, sizes: '100vw', focal });
-  return `<header class="ip-pagehero">
-      <div class="ip-pagehero__media">${media}</div>
-      <div class="ip-pagehero__shade" aria-hidden="true"></div>
-      <div class="ip-hero__veil" aria-hidden="true"></div>
-      <div class="ip-wrap ip-pagehero__body">
-        <h1 class="ip-pagehead__title">${md(ctx, title)}</h1>
-        ${[lead ?? []].flat().map((t) => `<p class="ip-lead">${md(ctx, t)}</p>`).join('')}
+function splitHead(ctx, { image, title, lead, focal }) {
+  return `<header class="ip-splithead">
+      <div class="ip-wrap ip-splithead__grid">
+        <div class="ip-splithead__text">
+          <h1 class="ip-pagehead__title">${md(ctx, title)}</h1>
+          ${[lead ?? []].flat().map((t) => `<p class="ip-lead">${md(ctx, t)}</p>`).join('')}
+        </div>
+        <div class="ip-splithead__media">${picture(ctx, image, { alt: alt(ctx, image), priority: true, sizes: '(min-width: 900px) 42vw, 92vw', focal })}</div>
       </div>
-      ${dissolve()}
     </header>`;
 }
 
@@ -321,7 +316,7 @@ export function home(ctx) {
 export function glacons(ctx) {
   const { c } = ctx;
   return `
-    ${pageHero(ctx, { image: 'cube-xl-photo', title: c.glacons.title, lead: c.glacons.lead })}
+    ${splitHead(ctx, { image: 'cube-xl-photo', title: c.glacons.title, lead: c.glacons.lead })}
     <section class="ip-section ip-section--tight">
       <div class="ip-wrap"><ul class="ip-tiles">${PRODUCT_IDS.map((id) => tile(ctx, id)).join('')}</ul></div>
     </section>
@@ -373,7 +368,7 @@ export function savoir(ctx) {
   const { c } = ctx;
   const s = c.savoir;
   return `
-    ${pageHero(ctx, { image: 'cube-xl-card', focal: '50% 44%', title: s.title, lead: s.paras })}
+    ${splitHead(ctx, { image: 'ice-stick-photo', title: s.title, lead: s.paras })}
     <section class="ip-section ip-section--tight ip-art">
       <div class="ip-wrap">
         <h2 id="h-art" data-reveal>${esc(s.artTitle)}</h2>
@@ -384,21 +379,26 @@ export function savoir(ctx) {
     ${ctaBand(ctx)}`;
 }
 
+/** One photograph per About section: the craft (the company's own photo), then the range. */
+const ABOUT_IMAGES = ['about-art', 'hero'];
+
 export function about(ctx) {
   const { c } = ctx;
   const a = c.about;
   const p = c.pro;
   return `
-    ${pageHero(ctx, { image: 'crushed-ice', title: a.title })}
+    ${pageHead(ctx, { title: a.title, soft: true })}
     ${a.sections
-      .map(
-        (s) => `<section class="ip-section ip-section--tight ip-about">
-      <div class="ip-wrap ip-about__grid" data-reveal>
-        <h2>${esc(s.title)}</h2>
-        <div class="ip-prose"><p class="ip-lead">${md(ctx, s.paras[0])}</p>${s.paras.slice(1).map((t) => `<p>${md(ctx, t)}</p>`).join('')}</div>
+      .map((sec, i) => `<section class="ip-section ip-section--tight ip-about">
+      <div class="ip-wrap ip-about__split${i % 2 ? ' ip-about__split--flip' : ''}">
+        <div class="ip-about__media" data-reveal>${picture(ctx, ABOUT_IMAGES[i], { alt: alt(ctx, ABOUT_IMAGES[i]), sizes: '(min-width: 900px) 40vw, 92vw' })}</div>
+        <div class="ip-about__body" data-reveal>
+          <h2>${esc(sec.title)}</h2>
+          <p class="ip-lead">${md(ctx, sec.paras[0])}</p>
+          ${sec.paras.slice(1).map((t) => `<p>${md(ctx, t)}</p>`).join('')}
+        </div>
       </div>
-    </section>`,
-      )
+    </section>`)
       .join('')}
     <section class="ip-section ip-horeca" id="horeca" aria-labelledby="h-horeca">
       <div class="ip-wrap ip-split">
