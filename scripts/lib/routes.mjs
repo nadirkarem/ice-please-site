@@ -5,7 +5,7 @@
 export const LANGS = ['fr', 'en', 'ar'];
 export const DEFAULT_LANG = 'fr';
 
-export const PRODUCT_IDS = ['cube-xl', 'ice-stick', 'moon-ball', 'custom-ice', 'gourmet-ice', 'crushed-ice', 'dry-ice', 'ice-stamp'];
+export const PRODUCT_IDS = ['cube-xl', 'ice-stick', 'moon-ball', 'custom-ice', 'gourmet-ice', 'ice-slab', 'crushed-ice', 'dry-ice', 'ice-stamp'];
 export const FEATURED_IDS = PRODUCT_IDS.slice(0, 4);
 export const MORE_IDS = PRODUCT_IDS.slice(4);
 

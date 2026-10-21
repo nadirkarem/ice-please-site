@@ -240,7 +240,8 @@
     "insta-3": "Grand bloc de glace éclairé en rose avec une bouteille de champagne prise à l’intérieur, dans un bar",
     "insta-4": "Verre de whisky avec une sphère de glace, à la lumière du jour",
     "insta-5": "Glaçon contenant une rose, tenu par une pince au-dessus d’un verre, sur fond noir",
-    "about-art": "Glaçon cristallin gravé « Ice Please! » tenu dans un gant noir, sur fond noir"
+    "about-art": "Glaçon cristallin gravé « Ice Please! » tenu dans un gant noir, sur fond noir",
+    "ice-slab": "Un chef dispose des tranches de poisson cru sur une grande plaque de glace transparente, lors d’une réception de nuit"
   },
   "specLabels": {
     "pack": "Conditionnement",
@@ -343,6 +344,17 @@
           "Packs de 2 kg"
         ]
       ]
+    },
+    "ice-slab": {
+      "card": "Plaque de glace",
+      "h1": "Plaque de glace",
+      "metaTitle": "Plaque de glace pour buffets et fruits de mer | Ice Please Maroc",
+      "paras": [
+        "Grande plaque de glace transparente, pensée pour présenter et garder au frais les poissons, les fruits de mer et les buffets froids.",
+        "Sa fonte lente maintient les produits à bonne température tout au long du service, avec une présentation spectaculaire.",
+        "Idéale pour les réceptions, les événements et les traiteurs. Contactez-nous pour en parler selon votre besoin."
+      ],
+      "specs": []
     },
     "crushed-ice": {
       "card": "Glace pilée",

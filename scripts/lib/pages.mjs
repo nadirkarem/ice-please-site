@@ -11,6 +11,7 @@ const CARD_IMAGE = {
   'moon-ball': 'moon-ball',
   'custom-ice': 'custom-ice',
   'gourmet-ice': 'gourmet-ice',
+  'ice-slab': 'ice-slab',
   'crushed-ice': 'crushed-ice',
   'dry-ice': 'dry-ice-glass',
   'ice-stamp': 'ice-stamp',
@@ -21,6 +22,7 @@ const PAGE_IMAGE = {
   'moon-ball': 'moon-ball',
   'custom-ice': 'custom-ice',
   'gourmet-ice': 'gourmet-ice',
+  'ice-slab': 'ice-slab',
   'crushed-ice': 'crushed-ice',
   'dry-ice': 'dry-ice-pile',
   'ice-stamp': 'ice-stamp',
@@ -280,7 +282,7 @@ export function home(ctx) {
       </div>
       <ul class="ip-rail" data-reveal>${FEATURED_IDS.map((id) => card(ctx, id, { sizes: cardSizesTall })).join('')}</ul>
       <div class="ip-wrap">
-        <ul class="ip-grid ip-grid--more" data-reveal>${MORE_IDS.map((id) => card(ctx, id, { sizes: cardSizesWide })).join('')}</ul>
+        <ul class="ip-grid ip-grid--more" style="--cols:${Math.min(MORE_IDS.length, 5)}" data-reveal>${MORE_IDS.map((id) => card(ctx, id, { sizes: cardSizesWide })).join('')}</ul>
       </div>
     </section>
 

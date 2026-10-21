@@ -434,6 +434,8 @@ body { margin: 0; background: #f5f9fc; }
 .ip-grid { display: grid; gap: 14px; margin-top: 14px; }
 .ip-grid--more { grid-template-columns: repeat(2, 1fr); }
 .ip-grid--more .ip-card { aspect-ratio: 1 / 1; }
+/* an odd last card takes the full row on phones */
+.ip-grid--more .ip-card:last-child:nth-child(odd) { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
 .ip-grid--more .ip-card__go { display: none; }
 .ip-grid--more .ip-card__label { padding-inline: 14px; }
 
@@ -444,7 +446,8 @@ body { margin: 0; background: #f5f9fc; }
   }
   .ip-rail > .ip-card { flex: none; aspect-ratio: 3 / 4; }
   .ip-grid { gap: 20px; margin-top: 20px; }
-  .ip-grid--more { grid-template-columns: repeat(4, 1fr); }
+  .ip-grid--more { grid-template-columns: repeat(var(--cols, 4), 1fr); }
+  .ip-grid--more .ip-card:last-child:nth-child(odd) { grid-column: auto; aspect-ratio: 5 / 4; }
   .ip-grid--more .ip-card { aspect-ratio: 5 / 4; }
   .ip-grid--more .ip-card__go { display: grid; }
   .ip-grid--more .ip-card__label { padding-inline-start: 16px; }
@@ -679,7 +682,7 @@ html:not(.js) .ip-chapter, .no-motion .ip-chapter { min-height: 0; padding-block
 @media (hover: hover) { .ip-tile__link:hover img { transform: scale(1.045); } }
 @media (min-width: 640px) { .ip-tiles { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
 @media (min-width: 1000px) {
-  .ip-tiles { grid-template-columns: repeat(4, 1fr); gap: 36px 20px; }
+  .ip-tiles { grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
   .ip-tile__link { display: block; padding: 0; background: transparent; box-shadow: none; }
   .ip-tile__media { aspect-ratio: 4 / 5; border-radius: var(--ip-radius-l); }
   .ip-tile__body { padding: 16px 0 0; gap: 6px; }

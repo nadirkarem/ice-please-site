@@ -240,7 +240,8 @@
     "insta-3": "A large block of ice lit pink with a champagne bottle frozen inside, in a bar",
     "insta-4": "A whisky glass with an ice sphere, in daylight",
     "insta-5": "Ice cube containing a rose, held with tongs above a glass, on a black background",
-    "about-art": "Crystal clear ice cube engraved “Ice Please!” held in a black glove, on a black background"
+    "about-art": "Crystal clear ice cube engraved “Ice Please!” held in a black glove, on a black background",
+    "ice-slab": "A chef arranges slices of raw fish on a large transparent slab of ice at an evening reception"
   },
   "specLabels": {
     "pack": "Packaging",
@@ -343,6 +344,17 @@
           "Packs of 2 kg"
         ]
       ]
+    },
+    "ice-slab": {
+      "card": "Ice slab",
+      "h1": "Ice slab",
+      "metaTitle": "Ice slab for buffets and seafood displays | Ice Please Morocco",
+      "paras": [
+        "A large, transparent slab of ice made to present seafood, fish and cold buffets and keep them chilled.",
+        "Its slow melt keeps the food at a good temperature throughout the service, with a spectacular presentation.",
+        "Ideal for receptions, events and caterers. Contact us to talk about what you need."
+      ],
+      "specs": []
     },
     "crushed-ice": {
       "card": "Crushed ice",
